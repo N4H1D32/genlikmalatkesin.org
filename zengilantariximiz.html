@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="az">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Genlik — Genlik Malatkeşin İcması | Premium</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="genlikfavicon.ico" type="image/x-icon">
+  <style>
+    :root{
+      --bg:#fbfaf7; --card:#ffffff; --muted:#6b6b6b;
+      --green:#009639; --red:#e52521; --deep:#004b70; --gold:#d4af37;
+      --radius:16px; --container:1100px; --shadow: rgba(15,20,25,0.08);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;background:var(--bg);color:#111}
+
+    .site{max-width:var(--container);margin:32px auto;padding:20px}
+
+    /* header */
+    header{display:flex;align-items:center;justify-content:space-between;gap:20px;background:linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.6));padding:14px;border-radius:14px;box-shadow:0 8px 30px var(--shadow)}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo-wrap{width:92px;height:92px;border-radius:14px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#fff,#fbfbfb);box-shadow:0 6px 20px var(--shadow);transform:translateY(0);animation:logoDrop .9s cubic-bezier(.2,.9,.3,1)}
+    @keyframes logoDrop{from{opacity:0;transform:translateY(-10px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+    .logo-wrap img{width:100%;height:100%;object-fit:cover}
+    .brand h1{font-size:20px;margin:0;letter-spacing:0.2px}
+    .brand p{margin:0;color:var(--muted);font-size:13px}
+
+    nav{display:flex;gap:12px}
+    nav a{padding:8px 12px;border-radius:10px;text-decoration:none;color:#222;font-weight:600;transition:all .25s}
+    nav a[data-accent="green"]:hover{background:rgba(0,150,57,0.08);color:var(--green)}
+    nav a[data-accent="red"]:hover{background:rgba(229,37,33,0.06);color:var(--red)}
+
+    /* hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:28px}
+    .hero-card{background:linear-gradient(180deg,#fff,#fcfcfb);padding:28px;border-radius:18px;box-shadow:0 14px 50px var(--shadow);position:relative;overflow:hidden}
+
+    .badge{position:absolute;top:16px;right:16px;background:linear-gradient(135deg,var(--gold),#ffd77a);padding:10px 14px;border-radius:12px;font-weight:800;color:#1b1b1b;box-shadow:0 6px 18px rgba(212,175,55,0.2);}
+
+    .hero h2{font-size:32px;margin:0 0 10px}
+    .hero p{color:var(--muted);line-height:1.7}
+
+    .stars{display:flex;gap:6px;margin-top:12px}
+    .star{width:36px;height:36px;border-radius:8px;background:linear-gradient(180deg,#fff,#fff);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 14px var(--shadow);}
+    .star svg{width:18px;height:18px;fill:var(--gold)}
+
+    .hero-meta{display:flex;gap:12px;margin-top:18px}
+    .meta{background:var(--bg);padding:12px;border-radius:12px;box-shadow:0 6px 18px var(--shadow);text-align:center;min-width:110px}
+    .meta strong{display:block;font-size:18px}
+    .meta span{display:block;color:var(--muted);font-size:13px}
+
+    .hero-side{border-radius:14px;overflow:hidden;box-shadow:0 16px 40px var(--shadow)}
+    .hero-side img{width:100%;height:100%;object-fit:cover;display:block;min-height:300px}
+    .hero-actions{display:flex;gap:12px;padding:14px;background:linear-gradient(180deg,rgba(255,255,255,0.9),#fff)}
+    .btn{padding:12px 16px;border-radius:12px;border:0;font-weight:700;cursor:pointer}
+    .btn-primary{background:var(--green);color:#fff}
+    .btn-outline{background:transparent;border:1px solid rgba(0,0,0,0.06)}
+
+    /* sections */
+    .section{margin-top:28px;padding:22px;background:linear-gradient(180deg,#fff,#fcfcfb);border-radius:14px;box-shadow:0 10px 30px var(--shadow)}
+    .section h3{margin:0 0 8px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:12px}
+    .card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 8px 20px var(--shadow);transition:transform .3s}
+    .card:hover{transform:translateY(-8px)}
+    .card h4{margin:0 0 6px}
+    .card p{color:var(--muted);font-size:14px}
+
+    /* gallery */
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:12px}
+    .gallery img{width:100%;height:160px;object-fit:cover;border-radius:10px;cursor:pointer;transition:transform .35s;}
+    .gallery img:hover{transform:scale(1.04)}
+
+    /* contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 320px;gap:16px}
+    form{display:flex;flex-direction:column;gap:10px}
+    input,textarea{padding:12px;border-radius:10px;border:1px solid #eee;font-size:14px}
+
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media (max-width:1000px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}.gallery{grid-template-columns:repeat(2,1fr)}.contact-grid{grid-template-columns:1fr}}
+    @media (max-width:520px){.site{padding:12px}.grid{grid-template-columns:1fr}.gallery img{height:120px}}
+
+    /* subtle entrance animations */
+    .reveal{opacity:0;transform:translateY(10px);animation:reveal .7s forwards;}
+    .reveal.delay{animation-delay:.12s}
+    @keyframes reveal{to{opacity:1;transform:none}}
+
+  </style>
+</head>
+<body>
+  <div class="site">
+    <header>
+      <div class="brand">
+        <div class="logo-wrap"><img src="zengilan.jpeg" alt="Genlik Malatkeşin İcması logo">
+        </div>
+        <div>
+          <h1>Genlik — Malatkeşin İcması</h1>
+          <p>Zəngilan rayonu • Genlik kəndi — Malatkeşin, mədəniyyət və təbiət</p>
+        </div>
+      </div>
+      <nav>
+        <a href="zengilan.html" data-accent="green">Ana səhifə</a>
+        <a href="zengilanhaqqimizda.html" data-accent="green">Haqqımızda</a>
+        <a href="zengilantariximiz.html" data-accent="green">Tariximiz</a>
+        <a href="zengilansekiller.html" data-accent="green">Qalereya</a>
+        <a href="zengilanuzvler.html" data-accent="green">Üzvlər</a>
+        <a href="zengilanelaqe.html" data-accent="green">Əlaqə</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="hero-card reveal">
+        <div class="badge"></div>
+        <h2>Malatkeşin kəndinin tarixi</h2>
+        <p>Malatkeşin — Azərbaycan Respublikasının Zəngilan rayonunun Zəngilan şəhər inzibati ərazi dairəsində kənd.
+Kəndin adı oykonim malat (maldarlar) və keşin (türk dillərində “düşərgə, dayanacaq”) komponentlərindən düzəlib, “maldarların düşərgəsi” mənasındadır.
+
+Oxçuçayın sağ sahilində, çox da hündür olmayan təpələrin ətəklərində yerləşən kəndin çox geniş əkin sahələri və otlaqları olub. Torpaqları olduqca məhsuldardır.
+ Əsas əhalisi Azərbaycan türkləridir.
+
+Birinci Qarabağ müharibəsi zamanı, 27 oktyabr 1993-cü ildə, kənd Ermənistan silahlı qüvvələri tərəfindən işğal edilərək məhv edilmişdir.
+
+ İkinci Qarabağ müharibəsi zamanı, 22 oktyabr 2020-ci ildə, şanlı, qəhrəman Azərbaycan Ordusu tərəfindən işğaldan azad olunmuşdur. 
+</p>
+
+        <h2>Genlik kəndinin tarixi</h2>
+        <p>Genlik — Azərbaycan Respublikasının Zəngilan rayonunun Zəngilan şəhər inzibati ərazi dairəsində kənd.
+Kənd salındığı Genlik adlı yerin adını daşıyır. Oykonim "geniş yer" mənasındadır.
+Genlik kəndindən bir qədər şimalda vaxtı ilə başqa bir Genlik ( Yuxarı Genlik ) kəndi də mövcud olub. Sonralar bu kəndin əhalisi indiki Genlik kəndi ərazisinə köçmüşlər.
+Süsən dağının qərb ətəyində yerləşən bu kəndin yeri heyvandarlıq üçün çox əlverişlidir.
+Qarşı tərəfdə yəni Oxçuçayın sağ sahilində çəmənliklər və meşə vardır ki, bu da təsərrüfat üçün çox əlverişlidir. Kəndin adı da təbii ki bu geniş ərazilərlə bağlı yaranmışdır. Genlik geniş yer, ərazi mənasındadır.
+Əsas əhalisi Azərbaycan türkləridir.</p>
+
+
+        <h2>Genlik kəndinin toponimləri</h2>
+        <p>Cingir - Cingir quyusu, Əhməd qayası, Salat daşı (Əssalat daşı), Genlik məscidi, Şəfi çuxuru, Gəzmə damı </p>
+        <p></p>
+
+        <h2>Malatkeşin kəndinin toponimləri</h2>
+        <p>Xudunun yatağı, Şirzadın yatağı, Gürşad düşən, Çeşməli dərə, Sol dərə, Qırxayaq, Pirin dərəsi, Qızıldaş, Mal aulu, Tapan dərə, Qaratikan, Tutlu zəmi, Aşıq İsmayıl zəmisi, arKalba Qəfər saqqızı, Malatkeşin dərəsi, Çaqqallı dərə, Gəzmə damı, Sofular dərəsi, İman dərəsi, Nənəş dərəsi, Palıdlı dərə, İmaməli dərə çeşməsi, Topurqulu, Şirzad dərəsi, Quyu çuxuru, Ələkbər çuxuru, Qoğallı qırması, Bayram dərəsi, Kələk, Kotan, Sofular, Buludxan yeri, Dəyirman, Yol çıxan dərə, Yol tökülən dərə, Bulaq olan Selav, İsagölü, Böyürtkənli dərə, Uzun dərə, Zişdi dərə,Tosu yalı və s.</p>
+      </div>
+
+      <div class="hero-side reveal delay">
+        <img src="demiryumruq2.jpg" alt="Genlik təbiəti" onerror="this.src='dəmiryumur2.jpg'">
+      </div>
+    </div>
+
+
+
+    <footer>
+      © <span id="year"></span> Genlik Malatkeşin İcması • Developer: Nahid
+    </footer>
+  </div>
+
+  <div id="lightbox" style="position:fixed;inset:0;background:rgba(0,0,0,0.75);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:.25s" onclick="closeLight(event)">
+    <img id="lightImg" src="" style="max-width:92%;max-height:86%;border-radius:10px;box-shadow:0 14px 40px rgba(0,0,0,0.5)">
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Lightbox
+    function openLight(el){document.getElementById('lightImg').src = el.src; const lb = document.getElementById('lightbox'); lb.style.opacity=1; lb.style.pointerEvents='auto';}
+    function closeLight(e){ if(e.target.id==='lightbox' || e.target.id==='lightImg' || e.target.id===''){ document.getElementById('lightbox').style.opacity=0; document.getElementById('lightbox').style.pointerEvents='none'; }}
+
+    // Form
+    function sendMessage(e){ e.preventDefault(); alert('Təşəkkürlər — mesajınız göndərildi!'); e.target.reset(); }
+    function resetForm(){ const f = document.querySelector('form'); if(f) f.reset(); }
+
+    // Small reveal on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries)=>{entries.forEach(ent=>{ if(ent.isIntersecting) ent.target.style.opacity=1, ent.target.style.transform='none', ent.target.classList.remove('reveal'); })},{threshold:.12});
+    reveals.forEach(r=>io.observe(r));
+  </script>
+</body>
+</html>

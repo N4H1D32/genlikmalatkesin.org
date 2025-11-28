@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="az">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Genlik — Genlik Malatkeşin İcması | Premium</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="genlikfavicon.ico" type="image/x-icon">
+  <style>
+    :root{
+      --bg:#fbfaf7; --card:#ffffff; --muted:#6b6b6b;
+      --green:#009639; --red:#e52521; --deep:#000000; --gold:#d4af37;
+      --radius:16px; --container:1100px; --shadow: rgba(15,20,25,0.08);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;background:var(--bg);color:#111}
+
+    .site{max-width:var(--container);margin:32px auto;padding:20px}
+
+    /* header */
+    header{display:flex;align-items:center;justify-content:space-between;gap:20px;background:linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,255,255,0.6));padding:14px;border-radius:14px;box-shadow:0 8px 30px var(--shadow)}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo-wrap{width:92px;height:92px;border-radius:14px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg,#fff,#fbfbfb);box-shadow:0 6px 20px var(--shadow);animation:logoDrop .9s cubic-bezier(.2,.9,.3,1)}
+    @keyframes logoDrop{from{opacity:0;transform:translateY(-10px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
+    .logo-wrap img{width:100%;height:100%;object-fit:cover}
+    .brand h1{font-size:20px;margin:0;letter-spacing:0.2px}
+    .brand p{margin:0;color:var(--muted);font-size:13px}
+
+    nav{display:flex;gap:12px}
+    nav a{padding:8px 12px;border-radius:10px;text-decoration:none;color:#222;font-weight:600;transition:all .25s}
+    nav a[data-accent="green"]:hover{background:rgba(0,150,57,0.08);color:var(--green)}
+    nav a[data-accent="red"]:hover{background:rgba(229,37,33,0.06);color:var(--red)}
+
+    /* hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:flex-start;margin-top:28px}
+    .hero-card{background:linear-gradient(180deg,#fff,#fcfcfb);padding:28px;border-radius:18px;box-shadow:0 14px 50px var(--shadow);position:relative;overflow:hidden}
+    .badge{position:absolute;top:16px;right:16px;background:linear-gradient(135deg,var(--gold),#ffd77a);padding:10px 14px;border-radius:12px;font-weight:800;color:#1b1b1b;box-shadow:0 6px 18px rgba(212,175,55,0.2);}
+    .hero h2{font-size:28px;margin:24px 0 10px;color:var(--deep)}
+    .hero p{color:var(--muted);line-height:1.7;margin:4px 0}
+
+    /* list layout */
+    .people-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .people-list p {
+      background: #fff;
+      padding: 10px 14px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px var(--shadow);
+      transition: transform .2s, background .3s;
+    }
+    .people-list p:hover {
+      transform: scale(1.03);
+      background: #f9f9f9;
+    }
+
+    .hero-side{border-radius:14px;overflow:hidden;box-shadow:0 16px 40px var(--shadow)}
+    .hero-side img{width:100%;height:100%;object-fit:cover;display:block;min-height:300px}
+
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px}
+
+    /* responsive */
+    @media (max-width:1000px){
+      .hero{grid-template-columns:1fr}
+    }
+
+    /* animations */
+    .reveal{opacity:0;transform:translateY(10px);animation:reveal .7s forwards;}
+    .reveal.delay{animation-delay:.12s}
+    @keyframes reveal{to{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <div class="site">
+    <header>
+      <div class="brand">
+        <div class="logo-wrap"><img src="zengilan.jpeg" alt="Genlik Malatkeşin İcması logo"></div>
+        <div>
+          <h1>Genlik — Malatkeşin İcması</h1>
+          <p>Zəngilan rayonu • Genlik kəndi — Malatkeşin, mədəniyyət və təbiət</p>
+        </div>
+      </div>
+      <nav>
+        <a href="index.html" data-accent="green">Ana səhifə</a>
+        <a href="zengilanhaqqimizda.html" data-accent="green">Haqqımızda</a>
+        <a href="zengilantariximiz.html" data-accent="green">Tariximiz</a>
+        <a href="zengilansekiller.html" data-accent="green">Qalereya</a>
+        <a href="zengilanuzvler.html" data-accent="green">Üzvlər</a>
+        <a href="zengilanelaqe.html" data-accent="green">Əlaqə</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <div class="hero-card reveal">
+        <h2>Bulaqları</h2>
+        <p>Heydər bulağı, Tovuz bulağı, Həsənxan bulağı, Məlik bulağı, Ağ Qapı bulağı</p>
+
+        <h2>Ziyalı insanları</h2>
+        <h3>Malatkeşin</h3>
+        <div class="people-list">
+          <p>Soltan həkim</p>
+          <p>Əbil Həsənov</p>
+          <p>Heydərov Məhəmməd</p>
+          <p>Novruzov İsmayıl</p>
+          <p>Novruzov Ərşad</p>
+          <p>Qaçay Əliyev</p>
+          <p>Heydərov Tofiq</p>
+          <p>Əhməd Dünyamalıyev</p>
+          <p>Mahmud müəllim</p>
+          <p>Mikayılov Bəhmən</p>
+          <p>Məmmədov Zülfiqar</p>
+          <p>Heydərov Şirindil</p>
+          <p>Heydərov Sahib</p>
+          <p>Səfərov Əli (həkim)</p>
+          <p>Səfərov Bəşir</p>
+          <p>Bayramov Eyvaz</p>
+          <p>Qəndili müəllim</p>
+        </div>
+
+          <h3>Genlik</h3>
+          <div class="people-list">
+          <p>Məmmədyarov Tofiq</p>
+          <p>Məmmədyarov İsmayıl</p>
+          <p>Məmmədyarov Ənvər</p>
+          <p>Məmmədyarov Rəşid (müəllim)</p>
+          <p>Dəstə müəllimə</p>
+          <p>Eyyub müəllim</p>
+          <p> Kifayət müəllim</p>
+          <p>Vəli müəllim</p>
+          <p>Cəlal müəllim</p>
+          <p>Məmiyev Barat</p>
+          <p>Məmməd müəllim</p>
+          </div>
+          <h3>Yüksək çinli zabitlər</h3>
+          <div class="people-list">
+            <p>Palkovnik Qəhrəmanov Abasqulu</p>
+            <p>Palkovnik Məhərrəmov Məhərrəm</p>
+            <p>Palkovnik Quliyev Məhəmməd</p>
+            <p>Palkovnik-leytenant Vəliyev Osman</p>
+            <p>Palkovnik-leytenant Məhərrəmov Sabir</p>
+            <p>Palkovnik-leytenant Məhərrəmov Rövşən</p>
+            <p>Palkovnik-leytenant Məhərrəmov Vidadi</p>
+            <p>Mayor Məhərrəmov Bəhlul</p>
+            <p>Mayor Məmmədyarov Ceyhun</p>
+            <p>Mayor Məmmədyarov Şahin</p>
+            <p>Mayor Məmmədyarov Cavid</p>
+            <p>Mayor Vəliyev Rauf</p>
+          </div>
+
+        <h2>Tanınmış insanları</h2>
+        <h3>Malatkeşin</h3>
+        <div class="people-list">
+          <p>Kəlbəlayı Musa</p>
+          <p>Heydərov Nəzər</p>
+          <p>Ağakişi yüzbaşı</p>
+          <p>Məşədi Novruz</p>
+          <p>Şalayın kişi</p>
+          <p>Dəmirçi Şirin</p>
+          <p>Şirzad kişi</p>
+          <p>Fərəcoğlu Musa</p>
+          <p>Səkinə Xudaverdiyeva (Genlik-Malatkeşinin paçtalyonu)</p>
+          <p>Məşədi Bayramalı</p>
+          <p>Kəlbə Qəfər</p>
+          <p>Qara Temir (Teymur)</p>
+          <p>Sarı Temir (Teymur)</p>
+          <p>Çoban Məhərrəm</p>
+          <p>Əhməd Babaşov</p>
+          <p>Sud Həsən</p>
+          <p>Nəsir kişi</p>
+          <p>Mönsüm kişi</p>
+          <p>Xuduş kişi</p>
+          <p>Məmi kişi</p>
+          <p>Nəçənnik Salman</p>
+          <p>Nəçənnik Məhərrəm</p>
+          <p>Şükür Talıbov</p>
+          <p>Xanış</p>
+          <p>Hüseyn</p>
+          <p>Ələkbər Cəfərov</p>
+        </div>
+
+        <h3>Genlik</h3>
+        <p>Rayonumuzun çox hörmətli seyidi olan Seyid Həsən ağa ömrünün son illərini bu kəntdə keçirmişdir.</p>
+        <div class="people-list">
+        <p>Şıxəli kişi</p>
+        <p>Şəfiyev Qulamhüseyn</p>
+        <p>İsmayılov Allahverdi</p>
+        <p>Seydalı kişi</p>
+        </div>
+
+        
+        <h3 style="margin-top:20px;font-weight:600;">Kənddən Böyük Vətən müharibəsinə gedənlərdən 42 nəfər şəhid olmuş və itkin düşmüş, 32 nəfər isə sağ qayıtmışdır.</h3>
+
+        <h2>I və ll Qarabağ Müharibəsi Şəhidləri</h2>
+        <h3>Malatkeşin kəndinin şəhidləri</h3>
+        <div class="people-list">
+          <p>Sadıqov Qorxmaz</p>
+          <p>Rəsulov Dadaş</p>
+          <p>Fərəcov Zahir</p>
+          <p>Rüstəmov Bəhrəm</p>
+          <p>Sarıyev Samir</p>
+        </div>
+
+        <h3>Genlik kəndinin şəhidləri</h3>
+        <div class="people-list">
+          <p>Abbasov Səhiyyədin</p>
+          <p>Vəliyev Heydər</p>
+          <p>Qurbanov Elman</p>
+        </div>
+
+        <h3 style="margin-top:20px;font-weight:600;">Birinci Qarabağ müharibəsi zamanı, 27 oktyabr 1993-cü ildə, kənd Ermənistan silahlı qüvvələri tərəfindən işğal edilərək məhv edilmişdir.
+
+ İkinci Qarabağ müharibəsi zamanı, 22 oktyabr 2020-ci ildə, şanlı, qəhrəman Azərbaycan Ordusu tərəfindən işğaldan azad olunmuşdur. 
+
+Böyük Vətən müharibəsinə gedənlərdən 23 nəfər şəhid olmuş və itkin düşmüş, 15 nəfər isə sağ qayıtmışdır.</h3>
+
+      </div>
+
+      <div class="hero-side reveal delay">
+        <img src="demiryumruq2.jpg" alt="Genlik təbiəti" onerror="this.src='dəmiryumur2.jpg'">
+      </div>
+    </div>
+
+    <footer>
+      © <span id="year"></span> Genlik Malatkeşin İcması • Developer: Nahid
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Reveal animation
+    const reveals = document.querySelectorAll('.reveal');
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(ent=>{
+        if(ent.isIntersecting){
+          ent.target.style.opacity=1;
+          ent.target.style.transform='none';
+          ent.target.classList.remove('reveal');
+        }
+      })
+    },{threshold:.12});
+    reveals.forEach(r=>io.observe(r));
+  </script>
+</body>
+</html>
