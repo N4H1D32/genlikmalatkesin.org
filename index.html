@@ -103,48 +103,6 @@
     }
     @keyframes fall{to{transform:translateY(110vh)}}
     @keyframes sway{0%,100%{margin-left:0}50%{margin-left:40px}}
-
-       /* YENİ İL AGACİ*/
-    .newyear-tree{
-  all:unset;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  margin-left:14px;
-  pointer-events:none;
-  animation:treeFloat 3.5s ease-in-out infinite;
-}
-
-.newyear-tree span{
-  all:unset;
-  display:block;
-  line-height:1;
-}
-
-.newyear-tree .star{
-  font-size:14px;
-  margin-bottom:-6px;
-  animation:starBlink 1.8s infinite alternate;
-}
-
-.newyear-tree .tree{
-  font-size:32px;
-  filter:drop-shadow(0 6px 10px rgba(0,0,0,.18));
-}
-
-/* animasiyalar */
-@keyframes treeFloat{
-  0%{transform:translateY(0)}
-  50%{transform:translateY(-4px)}
-  100%{transform:translateY(0)}
-}
-
-@keyframes starBlink{
-  from{opacity:.5; transform:scale(.9)}
-  to{opacity:1; transform:scale(1.15)}
-}
-
     
   </style>
 </head>
@@ -169,11 +127,6 @@
         <a href="zengilanuzvler.html" data-accent="green">Üzvlər</a>
         <a href="zengilanelaqe.html" data-accent="green">Developer</a>
         <a href="xeberler.html" data-accent="green">Xəbərlər</a>
-         <!--YENI IL AGACI-->
-        <div class="newyear-tree">
-            <span class="star">⭐</span>
-            <span class="tree">🎄</span>
-        </div>
       </nav>
     </header>
 
@@ -268,6 +221,7 @@
   </script>
 </body>
 </html>
+
 
 
 
